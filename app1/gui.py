@@ -8,11 +8,11 @@ clock = sg.Text("", key="clock")
 
 label = sg.Text("Type in a task:")
 input_box = sg.InputText(tooltip="Enter Task", key="task")
-add_button = sg.Button("Add", size=10)
+add_button = sg.Button(size=2, image_source="./app1/images/add.png", mouseover_colors="LightBlue2", tooltip="Add Task", key="Add")
 list_box = sg.Listbox(values=functions.read_file(), key="Tasks", enable_events=True, size=[45, 10])
 
 edit_button = sg.Button("Edit")
-complete_button = sg.Button("Complete")
+complete_button = sg.Button(image_source="./app1/images/complete.png", mouseover_colors="LightBlue2", tooltip="Complete Task", key="Complete")
 exit_button = sg.Button("Exit")
 
 # Creates application window and layout of buttons, each list is a different line in the application
